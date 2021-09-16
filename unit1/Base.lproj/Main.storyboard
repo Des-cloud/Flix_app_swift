@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Movies-->
+        <!--Now Showing-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MoviesViewController" customModule="unit1" customModuleProvider="target" sceneMemberID="viewController">
@@ -99,7 +99,7 @@
                             <constraint firstItem="CdE-h1-meR" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="u7e-gQ-Suc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Movies" id="kz1-Nr-lKf"/>
+                    <navigationItem key="navigationItem" title="Now Showing" id="kz1-Nr-lKf"/>
                     <connections>
                         <outlet property="tableView" destination="CdE-h1-meR" id="Sdk-dH-avj"/>
                     </connections>
