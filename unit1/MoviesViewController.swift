@@ -18,6 +18,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.rowHeight = 170
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -58,6 +59,20 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         cell.movieThumbnail.af.setImage(withURL: url)
         
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //Find the selected movie
+        let cell = sender as! UITableViewCell
+        let index = tableView.indexPath(for: cell)!
+        let movie = movies[index.row]
+        
+        //Pass selected movie
+        let movieDetailsController = segue.destination as! MovieDetailsViewController
+        
+        movieDetailsController.movie = movie
+        
+        tableView.deselectRow(at: index, animated: true)
     }
     
 }
