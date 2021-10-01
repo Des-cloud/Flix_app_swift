@@ -19,12 +19,14 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 ![](https://i.imgur.com/W7Urf2A.gif)
 ![](https://i.imgur.com/jWBhhsO.gif)
 ![](https://i.imgur.com/c3KcTZO.gif)
+![](https://i.imgur.com/SZoBViR.gif)
 
 
 <img src="YOUR_GIF_URL_HERE" width=250><br>
 
 ### Notes
 
+- [x] Implemented a search function.
 Learnt how to make an image clickable and connect it to a modal segue, big improvement on network requests and general swift programming language. Still struggling with layout. (How to make everything look the same on multiple devices)
 
 ---
@@ -51,5 +53,5 @@ Here is a video walkthrough.
 
 
 ### Notes
-- [x] Implemented a search function.
+
 Had difficulty making the pictures fit in the image view well. Either they are short or they are too big. Aspect fit, aspect fill and scale aspect fill was not helping. Also I could not figure how to add a background color/image (I am assuming the backdrop_path has a use).
