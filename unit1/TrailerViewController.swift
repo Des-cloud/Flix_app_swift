@@ -32,7 +32,6 @@ class TrailerViewController: UIViewController {
                  let movies = dataDictionary["results"] as! [[String:Any]]
                  for trailer in movies {
                      if (trailer["type"] as! String == "Trailer"){
-                         print("Came hereeeee")
                          self.movie = trailer["key"] as! String
                          break;
                      }

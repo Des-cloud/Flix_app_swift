@@ -22,9 +22,14 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CdE-h1-meR">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="Xfx-zm-uep">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieTableViewCell" rowHeight="170" id="Asy-VG-Fbd" customClass="MovieTableViewCell" customModule="unit1" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="170"/>
+                                        <rect key="frame" x="0.0" y="88.5" width="414" height="170"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Asy-VG-Fbd" id="7Va-V7-bML">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="170"/>
@@ -105,6 +110,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Now Showing" id="kz1-Nr-lKf"/>
                     <connections>
+                        <outlet property="searchTab" destination="Xfx-zm-uep" id="RzE-Yr-yFs"/>
                         <outlet property="tableView" destination="CdE-h1-meR" id="Sdk-dH-avj"/>
                     </connections>
                 </viewController>
@@ -280,13 +286,13 @@
                                 <color key="tintColor" systemColor="tintColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="blj-xt-8lY">
                                     <size key="itemSize" width="202" height="228"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieGridCell" id="kHS-L3-aey" customClass="MovieGridCell" customModule="unit1" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="202" height="228"/>
+                                        <rect key="frame" x="0.0" y="50" width="202" height="228"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ykE-iF-3D4">
                                             <rect key="frame" x="0.0" y="0.0" width="202" height="228"/>
@@ -305,6 +311,23 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="searchBar" id="tS5-h3-uVq" customClass="SearchView" customModule="unit1" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AFJ-S1-iQw">
+                                            <rect key="frame" x="0.0" y="3" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="dU2-in-uwk" id="PD6-EU-Ljw"/>
+                                            </connections>
+                                        </searchBar>
+                                    </subviews>
+                                    <connections>
+                                        <outlet property="searchTab" destination="AFJ-S1-iQw" id="yhd-0P-AKS"/>
+                                    </connections>
+                                </collectionReusableView>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eR9-4i-K08"/>

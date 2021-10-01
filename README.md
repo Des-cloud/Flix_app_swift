@@ -51,5 +51,5 @@ Here is a video walkthrough.
 
 
 ### Notes
-
+- [x] Implemented a search function.
 Had difficulty making the pictures fit in the image view well. Either they are short or they are too big. Aspect fit, aspect fill and scale aspect fill was not helping. Also I could not figure how to add a background color/image (I am assuming the backdrop_path has a use).
